@@ -9,10 +9,10 @@ import (
 func binarySearch(target int, accum []int) int {
 	var (
 		lo = 0
-		hi = len(accum)-1
+		hi = len(accum)
 	)
-	mid := lo + (hi-lo)/2
 	for lo < hi {
+		mid := lo + (hi-lo)/2
 		if target < accum[mid] {
 			hi = mid
 		} else {
@@ -24,11 +24,9 @@ func binarySearch(target int, accum []int) int {
 
 func main() {
 	var (
-		arr = [2]int{1,3}
+		arr = [3]int{1,3,1}
 		//index = -1
 	)
-	abcd := []int{1,2,3}
-	fmt.Println(abcd)
 	// 1, 2, 3 -> 1 | 3 | 6
 	rand.Seed(time.Now().UnixNano())
 	var accum []int
